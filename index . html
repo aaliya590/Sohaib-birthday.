@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#060107">
+<title>Happy Birthday • Aaliya ❤️ Sohaib</title>
+
+<!-- Romantic Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-deep: #050106;
+  --bg-wine: #1c0512;
+  --wine-mid: #380b22;
+  --wine-bright: #68123c;
+  --gold: #f6d69b;
+  --gold-bright: #fff3c9;
+  --rose: #ff9eb6;
+  --rose-glow: #ff5080;
+  --cream: #fff9f4;
+  --muted: #e2cadb;
+  --glass-panel: rgba(38, 8, 26, 0.88);
+  --border-line: rgba(246, 214, 155, 0.32);
+  --border-glow: rgba(255, 158, 182, 0.45);
+}
+
+body.theme-pink {
+  --bg-deep: #14030e;
+  --bg-wine: #2d0a1e;
+  --wine-mid: #4a0f30;
+  --wine-bright: #8a1d52;
+  --gold: #ffe1a8;
+  --rose: #ffb3c6;
+  --rose-glow: #ff3366;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; background: var(--bg-deep); }
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(ellipse at 50% 0%, #580d31 0%, #200414 45%, var(--bg-deep) 90%);
+  background-attachment: fixed;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  user-select: none;
+}
+
+/* ROMANTIC GLOWING AURORA LIGHTS */
+.ambient-glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+  animation: pulseGlow 12s infinite alternate ease-in-out;
+}
+.orb-1 { width: 420px; height: 420px; background: #92134b; top: -100px; left: -100px; }
+.orb-2 { width: 480px; height: 480px; background: #5c0f3c; bottom: 10%; right: -120px; animation-delay: -4s; }
+
+@keyframes pulseGlow {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+  50% { transform: scale(1.18) translate(30px, 40px); opacity: 0.55; }
+  100% { transform: scale(0.92) translate(-20px, 20px); opacity: 0.4; }
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, .serif { font-family: 'Playfair Display', Georgia, serif; }
+.script { font-family: 'Great Vibes', cursive; color: var(--gold); }
+.kicker {
+  font-size: 0.76rem;
+  letter-spacing: 3.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(246, 214, 155, 0.4);
+}
+.gold { color: var(--gold); }
+.rose { color: var(--rose); }
+
+/* PARTICLES */
+#starsCanvas, #fxCanvas, .petals-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#starsCanvas { z-index: 2; }
+.petals-container { z-index: 80; overflow: hidden; }
+#fxCanvas { z-index: 95; }
+
+.petal {
+  position: absolute;
+  top: -50px;
+  animation: petalFall linear forwards;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 8px rgba(255, 80, 128, 0.5));
+}
+@keyframes petalFall { to { transform: translate3d(var(--drift), 115vh, 0) rotate(720deg); opacity: 0; } }
+
+/* BUTTONS */
+button, input, textarea { font: inherit; outline: none; }
+button { cursor: pointer; }
+.btn-primary {
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, #8a1543 0%, #460924 50%, #1e0310 100%);
+  color: var(--gold-bright);
+  padding: 13px 32px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 0 25px rgba(246, 214, 155, 0.28), 0 8px 24px rgba(0,0,0,0.5), inset 0 0 15px rgba(255, 158, 182, 0.25);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 35px rgba(246, 214, 155, 0.6), inset 0 0 22px rgba(255, 158, 182, 0.45);
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold);
+  border: 1px solid var(--border-line);
+  padding: 11px 22px;
+  border-radius: 50px;
+  font-size: 0.84rem;
+  transition: 0.3s;
+  margin: 5px;
+  backdrop-filter: blur(10px);
+}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.18); border-color: var(--gold); transform: translateY(-2px); }
+
+/* GLASS PANELS */
+.glass-panel {
+  background: var(--glass-panel);
+  border: 1px solid var(--border-line);
+  border-radius: 28px;
+  padding: 36px 24px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.75), 0 0 30px rgba(104, 18, 60, 0.25), inset 0 0 35px rgba(246, 214, 155, 0.05);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* PROLOGUE */
+.prologue-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: radial-gradient(circle at center, #2e061b 0%, #050106 80%);
+  transition: opacity 0.8s ease;
+}
+.prologue-box { width: min(650px, 100%); animation: fadeIn 1.5s ease; }
+.name-input-field {
+  width: min(320px, 90%);
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 2px solid var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin: 15px 0;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(246, 214, 155, 0.2);
+}
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+.mood-card {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-line);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mood-card.active, .mood-card:hover {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(255,80,128,0.25), rgba(246,214,155,0.15));
+  box-shadow: 0 0 18px rgba(255, 80, 128, 0.3);
+}
+
+/* MAIN APP */
+#mainApp { display: none; }
+.top-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 120;
+  padding: 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(6, 1, 7, 0.94);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-line);
+}
+.top-header-left { display: flex; flex-direction: column; align-items: flex-start; }
+.top-header-title { font-family: 'Great Vibes', cursive; font-size: 1.7rem; color: var(--gold); line-height: 1; }
+.track-ticker { font-size: 0.68rem; color: var(--rose); letter-spacing: 1px; margin-top: 3px; }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.header-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+.scroll-progress {
+  position: fixed;
+  top: 62px; left: 0;
+  height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--rose-glow), var(--gold));
+  z-index: 121;
+}
+
+section {
+  min-height: 92vh;
+  padding: 95px 18px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.container { width: min(880px, 100%); text-align: center; }
+
+/* AUDIO PLAYER AT THE START */
+.media-player-card {
+  margin: 15px auto 25px; max-width: 620px;
+  background: radial-gradient(circle at center, #420a2a, #15020e);
+  border: 2px solid var(--gold); border-radius: 28px;
+  padding: 28px 22px; box-shadow: 0 0 55px rgba(255, 80, 128, 0.45), inset 0 0 25px rgba(246, 214, 155, 0.12);
+}
+.audio-visualizer {
+  display: flex; justify-content: center; align-items: flex-end;
+  gap: 6px; height: 42px; margin: 15px 0 20px;
+}
+.eq-bar {
+  width: 6px; background: linear-gradient(to top, var(--rose-glow), var(--gold));
+  border-radius: 6px; height: 8px; transition: height 0.2s ease;
+}
+.eq-bar.playing { animation: eqAnim 0.75s infinite alternate ease-in-out; }
+.eq-bar:nth-child(2) { animation-delay: 0.12s; }
+.eq-bar:nth-child(3) { animation-delay: 0.25s; }
+.eq-bar:nth-child(4) { animation-delay: 0.38s; }
+.eq-bar:nth-child(5) { animation-delay: 0.18s; }
+.eq-bar:nth-child(6) { animation-delay: 0.32s; }
+.eq-bar:nth-child(7) { animation-delay: 0.45s; }
+@keyframes eqAnim { 0% { height: 6px; } 100% { height: 38px; } }
+
+.audio-player-wrap { margin: 15px 0; display: flex; justify-content: center; }
+.audio-player-wrap audio { width: 100%; max-width: 480px; border-radius: 30px; outline: none; }
+
+/* 3D CUBE */
+.cube-wrap { width: 200px; height: 200px; margin: 38px auto; perspective: 1000px; }
+.photo-cube {
+  width: 100%; height: 100%; position: relative;
+  transform-style: preserve-3d; animation: rotateCube 16s infinite linear;
+}
+.cube-face {
+  position: absolute; width: 200px; height: 200px;
+  border: 2px solid var(--gold); border-radius: 18px;
+  background: #180310; overflow: hidden; box-shadow: 0 0 35px rgba(0,0,0,0.8);
+}
+.cube-face img { width: 100%; height: 100%; object-fit: cover; }
+.cube-face.front  { transform: rotateY(0deg) translateZ(100px); }
+.cube-face.back   { transform: rotateY(180deg) translateZ(100px); }
+.cube-face.right  { transform: rotateY(90deg) translateZ(100px); }
+.cube-face.left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube-face.top    { transform: rotateX(90deg) translateZ(100px); }
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+@keyframes rotateCube { to { transform: rotateX(360deg) rotateY(360deg); } }
+
+/* POLAROID GALLERY */
+.memory-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 25px; }
+.polaroid {
+  background: linear-gradient(145deg, #1f0616 0%, #11020c 100%);
+  border: 1px solid var(--border-line);
+  padding: 16px 16px 22px;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.65);
+  transition: transform 0.35s ease, border-color 0.35s;
+  cursor: pointer; text-align: left;
+}
+.polaroid:hover { transform: translateY(-6px); border-color: var(--gold); }
+.polaroid-img-box {
+  width: 100%; height: 480px; border-radius: 18px;
+  overflow: hidden; background: #080107; display: flex;
+  align-items: center; justify-content: center; position: relative;
+}
+.polaroid-img-box img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.polaroid:hover .polaroid-img-box img { transform: scale(1.03); }
+.polaroid-caption { padding: 16px 8px 0; }
+.polaroid-caption h4 { color: var(--gold); font-size: 1.18rem; }
+.polaroid-caption p { color: var(--muted); font-size: 0.9rem; margin-top: 5px; line-height: 1.6; }
+
+/* CAKE & CANDLE */
+.cake-stage { position: relative; width: 220px; height: 190px; margin: 30px auto 15px; cursor: pointer; }
+.cake-base {
+  position: absolute; bottom: 0; left: 10px; width: 200px; height: 85px;
+  background: linear-gradient(135deg, #7c143d, #38071c);
+  border-radius: 18px 18px 8px 8px; border: 2px solid var(--gold);
+}
+.cake-top-tier {
+  position: absolute; bottom: 80px; left: 35px; width: 150px; height: 60px;
+  background: linear-gradient(135deg, #991c4d, #4e0b29);
+  border-radius: 14px 14px 8px 8px; border: 2px solid var(--gold);
+}
+.cake-candle {
+  position: absolute; bottom: 138px; left: 103px; width: 14px; height: 42px;
+  background: repeating-linear-gradient(45deg, #fff, #fff 5px, #f5d496 5px, #f5d496 10px);
+  border-radius: 4px;
+}
+.candle-flame {
+  position: absolute; bottom: 180px; left: 100px; width: 20px; height: 28px;
+  background: radial-gradient(circle, #fff, #ffd200 40%, #ff4500 80%);
+  border-radius: 50% 50% 20% 20%;
+  animation: flicker 0.8s infinite alternate ease-in-out;
+  box-shadow: 0 0 28px #ffd200; transition: 0.5s;
+}
+.candle-flame.blown { opacity: 0; transform: scale(0) translateY(-20px); }
+@keyframes flicker { to { transform: scale(1.15) rotate(2deg); } }
+
+/* COUNTDOWN & SCAVENGER */
+.scavenger-bar {
+  background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-line);
+  padding: 8px 18px; border-radius: 30px; margin-bottom: 25px;
+  display: inline-flex; align-items: center; gap: 12px; font-size: 0.82rem;
+}
+.secret-heart { cursor: pointer; transition: 0.3s; opacity: 0.7; }
+.secret-heart.found { opacity: 1; filter: drop-shadow(0 0 10px var(--rose-glow)); transform: scale(1.25); }
+
+.countdown-grid { display: flex; justify-content: center; gap: 12px; margin: 25px 0 15px; flex-wrap: wrap; }
+.countdown-slot {
+  min-width: 80px; padding: 14px 10px; border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-line);
+}
+.countdown-slot b { display: block; font-size: 1.7rem; color: var(--gold); font-family: 'Playfair Display', serif; }
+.countdown-slot small { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; }
+
+/* BALLOON MINI GAME */
+.balloon-grid { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 25px 0; }
+.balloon-item {
+  width: 65px; height: 80px; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  background: linear-gradient(135deg, #ff5080, #7c143d);
+  border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; cursor: pointer; transition: transform 0.2s; position: relative;
+}
+.balloon-item::after {
+  content: ''; position: absolute; bottom: -8px; left: 50%;
+  transform: translateX(-50%); width: 2px; height: 10px; background: var(--gold);
+}
+.balloon-item.popped { transform: scale(0); opacity: 0; pointer-events: none; }
+
+/* DRAW CANVAS */
+#heartDrawCanvas {
+  width: 100%; max-width: 440px; height: 220px;
+  background: #11030d; border: 1px dashed var(--gold);
+  border-radius: 18px; margin: 15px auto; display: block;
+  touch-action: none; cursor: crosshair;
+}
+
+/* 5-LEVEL LOCK */
+.lock-stages-box { display: flex; justify-content: center; gap: 8px; margin: 20px 0; }
+.lock-stage-dot {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--gold); display: flex; align-items: center;
+  justify-content: center; font-size: 0.85rem; background: rgba(255,255,255,0.05);
+}
+.lock-stage-dot.unlocked { background: var(--rose-glow); color: white; box-shadow: 0 0 12px var(--rose-glow); }
+
+/* MERGE HEARTS */
+.merge-hearts-wrap { display: flex; justify-content: center; align-items: center; gap: 40px; margin: 30px auto; min-height: 90px; }
+.float-heart-node { font-size: 45px; transition: transform 1.5s ease; }
+.merge-hearts-wrap.merged .h1 { transform: translateX(25px) scale(1.3); }
+.merge-hearts-wrap.merged .h2 { transform: translateX(-25px) scale(1.3); }
+
+/* DUA ROAD */
+.future-road-box { text-align: left; border-left: 2px dashed var(--gold); margin: 25px auto; padding-left: 24px; max-width: 540px; }
+.future-step { position: relative; margin-bottom: 22px; }
+.future-step::before { content: '🌸'; position: absolute; left: -34px; top: 0; background: var(--bg-deep); }
+
+/* QUIZ */
+.quiz-options { display: grid; gap: 10px; margin: 20px 0; }
+.quiz-btn {
+  padding: 14px 18px; border-radius: 16px;
+  border: 1px solid var(--border-line); background: rgba(255, 255, 255, 0.05);
+  color: var(--cream); text-align: left; transition: all 0.25s ease; font-size: 0.92rem;
+}
+.quiz-btn:hover { border-color: var(--gold); background: rgba(255, 255, 255, 0.12); transform: translateX(4px); }
+.meter-track { height: 22px; border-radius: 30px; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border-line); padding: 2px; margin: 20px 0 10px; }
+.meter-fill-bar { height: 100%; width: 0%; border-radius: 30px; background: linear-gradient(90deg, #ff5080, #f6d69b); transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+/* BOTTOM DOCK */
+.bottom-dock {
+  position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 120; width: min(94%, 620px); display: flex; justify-content: space-around;
+  padding: 8px; border-radius: 30px; background: rgba(14, 3, 11, 0.94);
+  backdrop-filter: blur(20px); border: 1px solid var(--border-line);
+}
+.bottom-dock button { background: none; border: none; color: var(--muted); font-size: 0.65rem; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 6px; }
+.bottom-dock button span { font-size: 1.15rem; }
+.bottom-dock button:hover, .bottom-dock button.active { color: var(--gold); }
+
+/* POPUP MODAL & TOAST */
+.modal-overlay { position: fixed; inset: 0; background: rgba(3, 1, 4, 0.95); z-index: 600; display: none; align-items: center; justify-content: center; padding: 18px; }
+.modal-overlay.active { display: flex; animation: fadeIn 0.3s; }
+.modal-box { width: min(580px, 100%); background: var(--wine-mid); border: 1px solid var(--gold); border-radius: 24px; padding: 24px 18px; text-align: center; position: relative; max-height: 90vh; overflow-y: auto; }
+.modal-close { position: absolute; top: 10px; right: 16px; font-size: 28px; color: var(--gold); cursor: pointer; }
+
+#toast {
+  position: fixed; left: 50%; top: 78px; transform: translateX(-50%) scale(0.9);
+  z-index: 700; background: rgba(28, 6, 18, 0.96); border: 1px solid var(--gold);
+  padding: 10px 24px; border-radius: 50px; color: var(--gold-bright); font-size: 0.88rem;
+  opacity: 0; pointer-events: none; transition: all 0.3s ease; text-align: center;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) scale(1); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@media(min-width: 700px) {
+  .memory-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="ambient-glow-orb orb-1"></div>
+<div class="ambient-glow-orb orb-2"></div>
+
+<canvas id="starsCanvas"></canvas>
+<canvas id="fxCanvas"></canvas>
+<div class="petals-container" id="petals"></div>
+<div id="toast"></div>
+
+<!-- STAGE 0: PROLOGUE / NAME ENTRY -->
+<div class="prologue-screen" id="prologueScreen">
+  <div class="prologue-box glass-panel">
+    <div style="font-size: 48px; animation: float 3s infinite ease-in-out;">🌙✨</div>
+    <span class="kicker">Bismillah-ir-Rahman-ir-Rahim • Aaliya & Sohaib</span>
+    
+    <h1 class="serif" style="color: var(--gold-bright); font-size: clamp(1.6rem, 5vw, 2.3rem); margin: 10px 0;">
+      Assalamu Alaikum Wa Rahmatullahi Wa Barakatuhu ❤️
+    </h1>
+    <p style="color: var(--muted); font-size: 0.92rem; max-width: 480px; margin: 0 auto 15px;">
+      Someone made this little universe purely for your special birthday. Please enter your name to begin the journey with your special song:
+    </p>
+
+    <input type="text" id="nameAuthInput" class="name-input-field" placeholder="TYPE: SOHAIB" autocomplete="off">
+    <br>
+    
+    <div style="max-width: 440px; margin: 10px auto;">
+      <small class="gold" style="letter-spacing: 1px;">CHOOSE OUR STARTING MOOD:</small>
+      <div class="mood-grid">
+        <div class="mood-card active" onclick="setMood('romantic', this)">❤️ Romantic Peace</div>
+        <div class="mood-card" onclick="setMood('emotional', this)">🥺 Soulful Lofi</div>
+        <div class="mood-card" onclick="setMood('dreamy', this)">🌙 Dreamy Ambient</div>
+        <div class="mood-card" onclick="setMood('birthday', this)">🎂 Birthday Joy</div>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="validateAndEnter()">
+      <span>🔐 Enter My Heart & Play Song 🎵</span>
+    </button>
+  </div>
+</div>
+
+<!-- MAIN APPLICATION -->
+<div id="mainApp">
+  <!-- Top Navigation -->
+  <div class="top-header">
+    <div class="top-header-left">
+      <div class="top-header-title">Aaliya ❤️ Sohaib</div>
+      <div class="track-ticker" id="currentTrackDisplay">🎵 Playing: Tum Hi Ho (Dedicated)</div>
+    </div>
+    <div class="header-actions">
+      <button class="header-btn" onclick="toggleTheme()" title="Toggle Theme">🌗</button>
+      <button class="header-btn" id="audioToggleBtn" onclick="toggleAudioEngine()" title="Music Mute/Unmute">🔊</button>
+    </div>
+  </div>
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- CHAPTER 01: DEDICATED SONG THEATER (AT THE VERY START) -->
+  <section id="songSection">
+    <div class="container glass-panel">
+      <div class="scavenger-bar">
+        <span>Secret Hearts: <b id="foundCount" class="gold">0/5</b></span>
+        <span>•</span>
+        <span>Trophies: <b id="trophyCount" class="gold">0/4</b> 🏆</span>
+      </div>
+
+      <span class="kicker">Chapter 01 • Hamara Dedicated Song & Pehla Sukoon</span>
+      <h1 class="hero-title script" style="color: var(--gold-bright); font-size: clamp(2.8rem, 8.5vw, 4.8rem);">Salgirah Mubarak</h1>
+      <h2 class="serif rose" style="font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: -10px;">Mere Sohaib, Meri Jaan ❤️</h2>
+
+      <div class="media-player-card">
+        <div style="font-size: 46px; margin-bottom: 8px;">🎶✨</div>
+        <h3 class="gold" style="font-size: 1.35rem;">"Tum Hi Ho" • Dedicated To My Sohaib</h3>
+        <p class="rose" style="font-size: 0.92rem; font-style: italic; margin-bottom: 12px;">
+          "Kyunki tum hi ho... ab tum hi ho... Zindagi ab tum hi ho..." ❤️
+        </p>
+
+        <!-- Dynamic Equalizer -->
+        <div class="audio-visualizer" id="audioVisualizer">
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+        </div>
+
+        <!-- Audio Player with Loop to ensure music plays beginning to end -->
+        <div class="audio-player-wrap">
+          <audio id="mainAudioTrack" controls playsinline preload="auto" loop>
+            <source src="https://archive.org/download/TumHiHoArijitSingh/Tum%20Hi%20Ho%20-%20Arijit%20Singh.mp3" type="audio/mpeg">
+            <source src="Song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div style="margin-top: 15px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="playDedicatedSong()">
+            <span>▶ Play Song</span>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('countdownSection')">
+            <span>Scroll To Next Chapter ⏳</span>
+          </button>
+        </div>
+      </div>
+      <span class="secret-heart" onclick="collectHeart(0)">❤️</span>
+    </div>
+  </section>
+
+  <!-- CHAPTER 02: HERO & BIRTHDAY COUNTDOWN -->
+  <section id="countdownSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 02 • Countdown & Khushamdeed</span>
+      <h2 class="serif gold">15 August • Aapka Mubarak Din 🎂</h2>
+      <div id="heroTypewriter" class="typewriter-text" style="font-style: italic; color: var(--gold); margin: 15px 0;"></div>
+
+      <div class="countdown-grid">
+        <div class="countdown-slot"><b id="cdDays">00</b><small>Din</small></div>
+        <div class="countdown-slot"><b id="cdHours">00</b><small>Ghante</small></div>
+        <div class="countdown-slot"><b id="cdMins">00</b><small>Minutes</small></div>
+        <div class="countdown-slot"><b id="cdSecs">00</b><small>Seconds</small></div>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 20px;">Aapki paidaish ka sabse pyara din har lamha yaadgar rahega.</p>
+
+      <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+        <button class="btn-primary" onclick="scrollToSection('cake')"><span>🎂 Birthday Cake & Balloons</span></button>
+        <button class="btn-secondary" onclick="scrollToSection('cubeSection')"><span>🎲 3D Photo Cube</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 03: CAKE & WISH -->
+  <section id="cake">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 03 • Make A Wish & Blow Candle</span>
+      <h2 class="serif">Mom-batti Bujhaiye 🎂</h2>
+      <p style="color: var(--muted);">Cake ki mom-batti par tap karein aur dil mein ek pyari si dua maangiye...</p>
+
+      <div class="cake-stage" onclick="blowCandle()">
+        <div class="candle-flame" id="flame"></div>
+        <div class="cake-candle"></div>
+        <div class="cake-top-tier"></div>
+        <div class="cake-base"></div>
+      </div>
+
+      <p id="cakeWishText" class="gold" style="font-size: 1.05rem; min-height: 35px; font-style: italic;">
+        Tap on the flame to blow it out! ✨
+      </p>
+
+      <h4 class="rose" style="margin-top: 25px; font-size: 1rem;">🎈 Pop Birthday Balloons For Surprises:</h4>
+      <div class="balloon-grid">
+        <div class="balloon-item" onclick="popBalloon(this, '🎈 Dua: Allah aapko hamesha khush aur tandurust rakhe! Ameen.')">1</div>
+        <div class="balloon-item" onclick="popBalloon(this, '🎈 Secret: Aaliya aapke baghair bilkul adhoori hai!')">2</div>
+        <div class="balloon-item" onclick="popBalloon(this, '🎈 Waada: Har mushkil mein aapka haath thaame rakhungi.')">3</div>
+        <div class="balloon-item" onclick="popBalloon(this, '🎈 Gift: Unlimited lifelong warm hugs voucher unlocked!')">4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 04: 3D MEMORY CUBE -->
+  <section id="cubeSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 04 • 3D Yaadon Ka Cube</span>
+      <h2 class="serif">Ghoomti Hui Hamari Tasveerein 🎲</h2>
+      <p style="color: var(--muted);">Hamari har tasveer har taraf se noor bikher rahi hai...</p>
+
+      <div class="cube-wrap">
+        <div class="photo-cube">
+          <div class="cube-face front"><img src="Photo 1.jpg" onerror="this.src='Photo 1 .jpg'" alt="Photo 1"></div>
+          <div class="cube-face back"><img src="Photo 2.jpg" alt="Photo 2"></div>
+          <div class="cube-face right"><img src="Photo 3.jpg" alt="Photo 3"></div>
+          <div class="cube-face left"><img src="Photo 4.jpg" alt="Photo 4"></div>
+          <div class="cube-face top"><img src="Photo 5.jpg" alt="Photo 5"></div>
+          <div class="cube-face bottom"><img src="Photo 1.jpg" onerror="this.src='Photo 1 .jpg'" alt="Photo 1"></div>
+        </div>
+      </div>
+
+      <button class="btn-secondary" onclick="scrollToSection('memories')">📸 View Full Gallery</button>
+      <span class="secret-heart" onclick="collectHeart(1)">❤️</span>
+    </div>
+  </section>
+
+  <!-- CHAPTER 05: ALL MEMORIES GALLERY -->
+  <section id="memories">
+    <div class="container">
+      <span class="kicker">Chapter 05 • Soulful Bollywood Memories Mode</span>
+      <h2 class="serif">Tasveeron Ka <span class="gold">Safar</span> 📸</h2>
+      <p style="color: var(--muted); margin-bottom: 25px;">"Har tasveer mein ek ehsaas hai, aur har ehsaas mein sirf aap mere Sohaib."</p>
+
+      <div class="memory-grid">
+        <!-- Photo 1 -->
+        <div class="polaroid" onclick="openPhotoModal('Photo 1.jpg', 'Saath Tera • Pehla Sukoon ❤️')">
+          <div class="polaroid-img-box">
+            <img src="Photo 1.jpg" onerror="this.src='Photo 1 .jpg'" alt="Photo 1 - Sohaib & Aaliya">
+          </div>
+          <div class="polaroid-caption">
+            <h4>Saath Tera • Pehla Sukoon ❤️</h4>
+            <p>Jab aap mere barabar khade hote hain toh lagta hai saari kayenat mukammal ho gayi.<br><span class="gold">"Sirf aap aur main... hamesha ke liye."</span></p>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="polaroid" onclick="openPhotoModal('Photo 2.jpg', 'Shahi Rang • Noor-e-Nazar ✨')">
+          <div class="polaroid-img-box">
+            <img src="Photo 2.jpg" alt="Photo 2 - Traditional Look">
+          </div>
+          <div class="polaroid-caption">
+            <h4>Shahi Rang • Noor-e-Nazar ✨</h4>
+            <p>Aapki aankhon mein jo sanjeedgi aur mohabbat hai, wahi meri zindagi ka sukoon hai.<br><span class="gold">"MashaAllah, nazar na lage mere sartaj ko."</span></p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="polaroid" onclick="openPhotoModal('Photo 3.jpg', 'Shehzada Aur Shehzadi • Royal Khwab 👑')">
+          <div class="polaroid-img-box">
+            <img src="Photo 3.jpg" alt="Photo 3 - Royal Couple">
+          </div>
+          <div class="polaroid-caption">
+            <h4>Shehzada Aur Shehzadi • Royal Khwab 👑</h4>
+            <p>Har ek lamha jo aapke saath guzarta hai, woh dil ke sabse qeemti hisse mein mehfooz ho jata hai.<br><span class="gold">"Hamari jodi hamesha salamat rahe, Ameen."</span></p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="polaroid" onclick="openPhotoModal('Photo 4.jpg', 'Mera Sartaj • Noor-e-Mujassam 🌸')">
+          <div class="polaroid-img-box">
+            <img src="Photo 4.jpg" alt="Photo 4 - Sohaib">
+          </div>
+          <div class="polaroid-caption">
+            <h4>Mera Sartaj • Noor-e-Mujassam 🌸</h4>
+            <p>Aapki saadgi, aapka andaz aur aapki roshan shakhsiyat.<br><span class="gold">"Meri aankhon ka chain aur dil ki dhadkan."</span></p>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="polaroid" onclick="openPhotoModal('Photo 5.jpg', 'Yaadon Ka Guldasta • Collage Of Us 🤍')">
+          <div class="polaroid-img-box">
+            <img src="Photo 5.jpg" alt="Photo 5 - Special Memories">
+          </div>
+          <div class="polaroid-caption">
+            <h4>Yaadon Ka Guldasta • Collage Of Us 🤍</h4>
+            <p>Hamari hansi, sharartein, pyari baatein aur choti choti yaadein.<br><span class="gold">"Halal Nikah aur aage ki roshan zindagi InshaAllah."</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 06: LOVE LOCK -->
+  <section id="lockSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 06 • 5-Level Secret Love Lock</span>
+      <h2 class="serif">Mohabbat Ki Chabi 🔑</h2>
+      <p style="color: var(--muted);">Password dalkar stage unlock karein (Clue: Hamara pyara lafz 'JAAN'):</p>
+
+      <div class="lock-stages-box">
+        <div class="lock-stage-dot unlocked" id="dot1">1</div>
+        <div class="lock-stage-dot" id="dot2">2</div>
+        <div class="lock-stage-dot" id="dot3">3</div>
+        <div class="lock-stage-dot" id="dot4">4</div>
+        <div class="lock-stage-dot" id="dot5">5</div>
+      </div>
+
+      <input type="text" id="secretPassInput" class="name-input-field" placeholder="ENTER SECRET WORD" style="max-width:260px;">
+      <br>
+      <button class="btn-primary" onclick="checkSecretPassword()">🔓 Unlock Next Level</button>
+      <p id="lockFeedback" class="gold" style="font-size: 0.9rem; min-height: 25px; margin-top: 10px;"></p>
+    </div>
+  </section>
+
+  <!-- CHAPTER 07: MERGE HEARTS -->
+  <section id="mergeHeartsSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 07 • Two Hearts Merging</span>
+      <h2 class="serif">Dilo Ka Milan 🫀</h2>
+      <p style="color: var(--muted);">Dil ko press karke dekhein do roohein kaise ek hoti hain...</p>
+
+      <div class="merge-hearts-wrap" id="mergeHeartsWrap">
+        <div class="float-heart-node h1">🤍 Aaliya</div>
+        <div style="font-size: 24px;" class="gold">+</div>
+        <div class="float-heart-node h2">❤️ Sohaib</div>
+      </div>
+
+      <h3 class="gold script" style="font-size: 2.2rem; margin: 15px 0;">Aaliya + Sohaib = ∞ (Hamesha)</h3>
+      <button class="btn-primary" onclick="mergeHeartsAction()">💞 Merge Our Hearts Forever</button>
+      <span class="secret-heart" onclick="collectHeart(2)">❤️</span>
+    </div>
+  </section>
+
+  <!-- CHAPTER 08: VIRTUAL RING CEREMONY -->
+  <section id="ringSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 08 • Nikah Ka Khwab</span>
+      <h2 class="serif">Virtual Angoothi Ceremony 💍</h2>
+      <p style="color: var(--muted);">Is angoothi par tap karein aur hamesha ke rishte ka waada karein...</p>
+
+      <div class="ring-ceremony-stage" onclick="wearRing()" style="cursor: pointer; padding: 20px;">
+        <div style="font-size: 55px; animation: float 3s infinite ease-in-out;">💍</div>
+        <h3 class="gold" id="ringStatus" style="margin-top: 15px; font-size: 1.25rem;">"Qubool Hai?"</h3>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 5px;">(Tap to accept this digital promise)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 09: ENDLESS REASONS -->
+  <section id="reasonsSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 09 • Endless Reasons</span>
+      <h2 class="serif gold">Main Aap Se Kyun Pyaar Karti Hoon? 💖</h2>
+      <p style="color: var(--muted);">Button par tap karke dekhiye Aaliya ke dil ka ek aur khoobsurat raaz...</p>
+
+      <div class="reasons-box" style="background:rgba(0,0,0,0.35); border:1px dashed var(--gold); border-radius:18px; padding:22px; margin:20px auto; max-width:520px;">
+        <p id="reasonText" class="rose" style="font-size: 1.05rem; font-style: italic;">
+          "Kyunki aapki ek muskurahat mere poore din ki thakan mita deti hai." ❤️
+        </p>
+      </div>
+
+      <button class="btn-primary" onclick="generateLoveReason()">✨ Ek Aur Wajah Jaaniye</button>
+    </div>
+  </section>
+
+  <!-- CHAPTER 10: DRAW A HEART -->
+  <section id="drawSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 10 • Touch Magic & Drawing</span>
+      <h2 class="serif">Apne Haathon Se Dil Banayein 🎨</h2>
+      <p style="color: var(--muted);">Canvas par ungli ya mouse se Aaliya ke liye ek pyara sa dil draw karein:</p>
+
+      <canvas id="heartDrawCanvas" width="440" height="220"></canvas>
+
+      <div>
+        <button class="btn-secondary" onclick="clearDrawCanvas()">Clear Canvas</button>
+        <button class="btn-primary" onclick="saveDrawnHeart()">💌 Send Heart To Aaliya</button>
+        <span class="secret-heart" onclick="collectHeart(3)">❤️</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 11: SHAHI KHAT & CAPSULES -->
+  <section id="letter">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 11 • Dil Se Likha Khat & Time Capsules</span>
+      <h2 class="serif">Shahi Khat Mere Jaan Ke Naam 💌</h2>
+      <p style="color: var(--muted);">Lifafa kholne ke liye is par tap karein:</p>
+
+      <div class="envelope-wrap" id="envelopeBox" onclick="openEnvelopeLetter()" style="margin:25px auto; width:min(380px, 95%); height:230px; position:relative; cursor:pointer;">
+        <div style="position:absolute; inset:0; background:linear-gradient(145deg, #701438, #260715); border:1px solid var(--gold); border-radius:18px; box-shadow:0 15px 35px rgba(0,0,0,0.6);"></div>
+        <div class="env-paper" style="position:absolute; inset:8%; background:#fffbf2; color:#2b0f1c; border-radius:12px; padding:20px; text-align:left; font-family:'Playfair Display', serif; overflow-y:auto;">
+          <h3 style="color: #631139; margin-bottom: 8px;">Mere Pyare Sohaib,</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 8px;">
+            Salgirah bohot bohot mubarak ho meri jaan. Allah Ta'ala ka jitna shukr ada karun kam hai ke unhone aapko meri zindagi mein bheja. <b>Alhamdulillah.</b>
+          </p>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 8px;">
+            Aap meri har namaz aur har dua ka sabse khoobsurat hissa hain. Allah humare darmiyan mohabbat, izzat, rehmat aur sukoon hamesha qayam rakhe. Ameen. 🤲
+          </p>
+          <p class="script" style="font-size: 1.6rem; color: #701438; text-align: right;">Hamesha Aapki,<br>Aaliya</p>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:20px;">
+        <button class="btn-secondary" onclick="openCapsule('2027')">🕰️ Letter For 2027</button>
+        <button class="btn-secondary" onclick="openCapsule('sad')">🤍 Read If You're Sad</button>
+        <button class="btn-secondary" onclick="openCapsule('miss')">🥺 If You Ever Miss Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 12: DUA CORNER -->
+  <section id="duaRoadSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 12 • Roohani Connection & Future Road</span>
+      <h2 class="serif gold">Dua Corner & Halal Manzil 🤲</h2>
+      <p style="color: var(--muted);">"Duniya se lekar Jannat ke qasr tak ka roshan safar..."</p>
+
+      <div style="padding: 22px; background: rgba(0,0,0,0.4); border-radius: 20px; border: 1px dashed var(--gold); margin: 20px auto; max-width: 540px;">
+        <h4 class="gold" style="font-size: 1.15rem; line-height: 1.8;">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</h4>
+        <p class="rose" style="font-style: italic; margin-top: 10px;">
+          "Aye Allah! Sohaib ko hamesha khushiyan, sehat, kamyabi aur sukoon ataa farma aur humare rishte ko baa-barkat bana. Ameen."
+        </p>
+      </div>
+
+      <div class="future-road-box">
+        <div class="future-step">
+          <b>💍 1. Halal Nikah (InshaAllah)</b>
+          <p style="color:var(--muted); font-size:0.85rem;">Allah ke hukm aur parivar ki duayon ke saath ek rishta.</p>
+        </div>
+        <div class="future-step">
+          <b>🕋 2. Pehla Umrah Saath Mein</b>
+          <p style="color:var(--muted); font-size:0.85rem;">Khana-e-Kaba ke saamne haath uthakar shukrana.</p>
+        </div>
+        <div class="future-step">
+          <b>🏡 3. Hamara Sukoon Bhara Ghar</b>
+          <p style="color:var(--muted); font-size:0.85rem;">Subah ki chai, shaam ki baatein aur bepanah izzat.</p>
+        </div>
+      </div>
+      <span class="secret-heart" onclick="collectHeart(4)">❤️</span>
+    </div>
+  </section>
+
+  <!-- CHAPTER 13: QUIZ -->
+  <section id="quizSection">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 13 • Hamari Mohabbat Ka Imtehan</span>
+      <h2 class="serif">Romantic Couple Quiz 🎮</h2>
+      <p style="color: var(--muted);">Dekhein Sohaib Aaliya ke dil ko kitna gehrai se jaante hain:</p>
+      
+      <div style="margin: 20px 0;">
+        <h3 id="quizTitle" class="rose" style="font-size: 1.15rem; min-height: 40px;">Sawaal...</h3>
+        <div class="quiz-options" id="quizAnswers"></div>
+        <p id="quizFeedback" class="gold" style="min-height: 28px; font-size: 0.92rem;"></p>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--border-line); margin: 25px 0;">
+
+      <h3 class="serif gold">Mohabbat Ka Meter (Infinity)</h3>
+      <div class="meter-track">
+        <div class="meter-fill-bar" id="meterFill"></div>
+      </div>
+      <h2 id="meterValue" class="rose">0%</h2>
+      <button class="btn-primary" onclick="calculateLoveMeter()">💗 Measure Love To Infinity</button>
+    </div>
+  </section>
+
+  <!-- CHAPTER 14: FINALE -->
+  <section id="finale">
+    <div class="container glass-panel">
+      <span class="kicker">Chapter 14 • Royal Arabic Finale & Duayein</span>
+      <h1 class="serif script gold" style="font-size: clamp(2.8rem, 9vw, 5.2rem);">My Sohaib ❤️</h1>
+      <p style="font-size: 1.1rem; color: var(--gold-bright); max-width: 600px; margin: 12px auto; line-height: 1.8;">
+        "Allah aapki zindagi ko bepanah khushiyon, tandurusti, sukoon aur barkat se bhar de. Aap mere liye Allah ka sabse khoobsurat tohfa hain."
+      </p>
+
+      <h2 class="rose serif" style="margin: 20px 0 10px; font-size: 1.8rem;">
+        Allah Hafiz Fi Amanillah ❤️
+      </h2>
+      <p style="color: var(--gold); font-size: 0.95rem;">Hamesha aapke liye dua-go • Aapki Aaliya 🤲</p>
+
+      <div style="margin: 25px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid var(--gold);">
+        <h4 class="gold" style="margin-bottom: 10px;">Will you stay with me for every upcoming chapter of life?</h4>
+        <button class="btn-primary" onclick="finalAnswer('YES')">Yes, Always ❤️</button>
+        <button class="btn-primary" onclick="finalAnswer('FOREVER')">Forever & Till Jannah ♾️</button>
+      </div>
+
+      <button class="btn-primary" style="font-size: 1.05rem; padding: 16px 36px;" onclick="grandCelebration()">
+        🎉 Jashn-e-Mohabbat (Fireworks & Rose Storm)
+      </button>
+      <br>
+      <button class="btn-secondary" onclick="replayUniverse()">🔁 Replay Our Universe Story</button>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 25px 20px 110px; color: #a48a9c; font-size: 0.82rem;">
+    Endless Dua aur Mohabbat Se Banaya Gaya • Aaliya Ki Taraf Se Sohaib Ke Liye ❤️<br>
+    <span class="gold" style="font-weight: 600; margin-top: 4px; display: inline-block;">Allah Hafiz Fi Amanillah 🤲</span>
+  </footer>
+
+  <!-- BOTTOM DOCK (UPDATED NAVIGATION ORDER) -->
+  <div class="bottom-dock">
+    <button onclick="scrollToSection('songSection')"><span>🎵</span>Song</button>
+    <button onclick="scrollToSection('countdownSection')"><span>⏳</span>Birthday</button>
+    <button onclick="scrollToSection('cake')"><span>🎂</span>Cake</button>
+    <button onclick="scrollToSection('memories')"><span>📸</span>Photos</button>
+    <button onclick="scrollToSection('ringSection')"><span>💍</span>Ring</button>
+    <button onclick="scrollToSection('letter')"><span>💌</span>Khat</button>
+    <button onclick="scrollToSection('finale')"><span>🤲</span>Dua</button>
+  </div>
+</div>
+
+<!-- POPUP MODAL -->
+<div id="popupModal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-box">
+    <span class="modal-close" onclick="closeModalDirect()">&times;</span>
+    <h3 id="modalTitle" class="gold serif" style="font-size: 1.3rem; margin-bottom: 12px;"></h3>
+    <div id="modalBody" style="color: var(--cream); font-size: 0.92rem; line-height: 1.7;"></div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT ENGINE -->
+<script>
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openPhotoModal(src, title) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = `<img src="${src}" alt="${title}" style="max-width:100%; max-height:75vh; object-fit:contain; border-radius:18px; border:1px solid var(--gold); margin:10px auto; display:block; box-shadow: 0 0 30px rgba(0,0,0,0.8);">`;
+  document.getElementById('popupModal').classList.add('active');
+}
+function closeModal(e) { if (e.target.id === 'popupModal') closeModalDirect(); }
+function closeModalDirect() { document.getElementById('popupModal').classList.remove('active'); }
+
+function toggleTheme() {
+  document.body.classList.toggle('theme-pink');
+  showToast('Theme Switch Ho Gaya ✨');
+}
+
+let currentChosenMood = 'romantic';
+function setMood(mood, el) {
+  currentChosenMood = mood;
+  document.querySelectorAll('.mood-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+
+/* UNLOCK & AUTO-START SONG AT THE VERY BEGINNING */
+function validateAndEnter() {
+  const val = document.getElementById('nameAuthInput').value.trim().toUpperCase();
+  if (val === 'SOHAIB' || val === 'JAAN' || val === 'AALIYA' || val.length > 0) {
+    document.getElementById('prologueScreen').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('prologueScreen').style.display = 'none';
+      document.getElementById('mainApp').style.display = 'block';
+      
+      // Auto Play Song Immediately
+      playDedicatedSong();
+
+      spawnPetalShower(22);
+      runTypewriter("Sohaib... aap meri har dua ka sabse khoobsurat jawab hain. ❤️", "heroTypewriter");
+      showToast('Assalamu Alaikum Sohaib ❤️ Song Started Playing!');
+      initDrawCanvas();
+    }, 800);
+  } else {
+    showToast('Pehle apna pyara naam likhiye jaan: SOHAIB ❤️');
+  }
+}
+
+function runTypewriter(text, elId) {
+  const el = document.getElementById(elId);
+  if (!el) return;
+  el.textContent = '';
+  let i = 0;
+  const timer = setInterval(() => {
+    el.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) clearInterval(timer);
+  }, 45);
+}
+
+/* SONG ENGINE */
+const audioElem = document.getElementById('mainAudioTrack');
+const eqBars = document.querySelectorAll('.eq-bar');
+
+function setEqState(isPlaying) {
+  eqBars.forEach(b => {
+    if (isPlaying) b.classList.add('playing');
+    else b.classList.remove('playing');
+  });
+}
+
+function playDedicatedSong() {
+  audioElem.volume = 1.0;
+  audioElem.play().then(() => {
+    setEqState(true);
+    document.getElementById('audioToggleBtn').textContent = '🔊';
+    document.getElementById('currentTrackDisplay').textContent = '🎵 Playing: Tum Hi Ho (Dedicated)';
+    showToast('🎵 Playing "Tum Hi Ho" with full voice ❤️');
+  }).catch(() => {
+    showToast('Tap play directly on the audio controls! 🎶');
+  });
+}
+
+function toggleAudioEngine() {
+  const btn = document.getElementById('audioToggleBtn');
+  if (!audioElem.paused) {
+    audioElem.pause();
+    btn.textContent = '🔇';
+    setEqState(false);
+    showToast('Song Muted / Paused 🔇');
+  } else {
+    audioElem.play();
+    btn.textContent = '🔊';
+    setEqState(true);
+    showToast('Song Playing 🎵');
+  }
+}
+
+audioElem.addEventListener('play', () => {
+  setEqState(true);
+  document.getElementById('audioToggleBtn').textContent = '🔊';
+});
+
+audioElem.addEventListener('pause', () => {
+  setEqState(false);
+  document.getElementById('audioToggleBtn').textContent = '🔇';
+});
+
+/* MINI GAMES */
+let foundHearts = 0;
+let earnedTrophies = 0;
+
+function collectHeart(idx) {
+  const hearts = document.querySelectorAll('.secret-heart');
+  if (!hearts[idx].classList.contains('found')) {
+    hearts[idx].classList.add('found');
+    foundHearts++;
+    document.getElementById('foundCount').textContent = `${foundHearts}/5`;
+    triggerBurst(25);
+    showToast(`Secret Heart ${foundHearts}/5 Found! ❤️`);
+    if (foundHearts === 5) {
+      earnedTrophies++;
+      document.getElementById('trophyCount').textContent = `${earnedTrophies}/4`;
+      showToast('🏆 Achievement: True Love Explorer!');
+    }
+  }
+}
+
+let candleBlown = false;
+function blowCandle() {
+  if (candleBlown) return showToast('Mom-batti bujh chuki hai ❤️');
+  candleBlown = true;
+  document.getElementById('flame').classList.add('blown');
+  document.getElementById('cakeWishText').innerHTML = "✨ <b>Aapki har dua qubool ho, Ameen!</b> Salgirah Mubarak Sohaib! ❤️";
+  triggerBurst(80);
+  spawnPetalShower(35);
+  showToast('Salgirah Mubarak My Jaan! 🎂🎉');
+}
+
+function popBalloon(el, msg) {
+  if (!el.classList.contains('popped')) {
+    el.classList.add('popped');
+    triggerBurst(15);
+    showToast(msg);
+  }
+}
+
+let currentLockStage = 1;
+function checkSecretPassword() {
+  const val = document.getElementById('secretPassInput').value.trim().toUpperCase();
+  const feedback = document.getElementById('lockFeedback');
+  if (val === 'JAAN' || val === 'SOHAIB' || val === 'AALIYA') {
+    currentLockStage++;
+    feedback.textContent = `Stage ${currentLockStage} Unlocked! MashaAllah ❤️`;
+    document.getElementById('secretPassInput').value = '';
+    const dot = document.getElementById(`dot${currentLockStage}`);
+    if (dot) dot.classList.add('unlocked');
+    triggerBurst(25);
+    if (currentLockStage >= 5) {
+      feedback.innerHTML = "🎉 <b>All 5 Levels Unlocked!</b> You hold the key to my heart 🗝️❤️";
+      earnedTrophies++;
+      document.getElementById('trophyCount').textContent = `${earnedTrophies}/4`;
+    }
+  } else {
+    feedback.textContent = "Clue: Hamara pyara lafz 'JAAN' try karein 😘";
+  }
+}
+
+function mergeHeartsAction() {
+  document.getElementById('mergeHeartsWrap').classList.add('merged');
+  triggerBurst(40);
+  showToast('Two Hearts Merged Forever ❤️');
+}
+
+function wearRing() {
+  document.getElementById('ringStatus').innerHTML = "✨ <b>Qubool Hai! Qubool Hai! Qubool Hai!</b> 💍<br><span style='color:var(--rose); font-size:0.9rem;'>Halal Mohabbat Till Jannah InshaAllah.</span>";
+  triggerBurst(60);
+  spawnPetalShower(30);
+  showToast('Angoothi Pehna Di Gayi 💍❤️');
+}
+
+const loveReasons = [
+  "Kyunki aapki ek muskurahat mere poore din ki thakan mita deti hai. ❤️",
+  "Kyunki aap mujhe hamesha izzat aur bepanah mohabbat dete hain. ✨",
+  "Kyunki jab aap mere saath hote hain, toh mujhe kisi aur cheez ki parwah nahi rehti. 🤍",
+  "Kyunki aap meri har dua ka sabse khoobsurat jawab hain. 🤲",
+  "Kyunki aapki aankhon mein mere liye hamesha wafa aur sukoon hota hai. 🌙",
+  "Kyunki aap sirf meri pasand nahi, meri rooh ka hissa hain. 💍"
+];
+let reasonIdx = 0;
+function generateLoveReason() {
+  reasonIdx = (reasonIdx + 1) % loveReasons.length;
+  document.getElementById('reasonText').textContent = `"${loveReasons[reasonIdx]}"`;
+  triggerBurst(20);
+}
+
+function openCapsule(type) {
+  if (type === '2027') {
+    openPhotoModal('Photo 3.jpg', 'Letter To Future Sohaib (2027) 🕰️');
+  } else if (type === 'sad') {
+    document.getElementById('modalTitle').textContent = "Read If You're Sad... 🤍";
+    document.getElementById('modalBody').innerHTML = "<p>Meri jaan, agar koi baat pareshan kar rahi hai toh yaad rakhein main hamesha aapke saath khadi hoon. Ek gehri saans lijiye aur kaho 'Alhamdulillah'. Sab theek ho jayega InshaAllah.</p>";
+    document.getElementById('popupModal').classList.add('active');
+  } else {
+    document.getElementById('modalTitle').textContent = "If You Ever Miss Me... 🥺";
+    document.getElementById('modalBody').innerHTML = "<p>Apne seene par haath rakhein aur aankhein band karein. Main aapki har dhadkan aur har dua ke andar mehfooz hoon.</p>";
+    document.getElementById('popupModal').classList.add('active');
+  }
+}
+
+function openEnvelopeLetter() {
+  showToast('Shahi Khat Khol Diya Gaya 💌');
+  triggerBurst(25);
+}
+
+/* DRAWING CANVAS */
+let isDrawing = false, drawCtx = null, drawCanvas = null;
+function initDrawCanvas() {
+  drawCanvas = document.getElementById('heartDrawCanvas');
+  if (!drawCanvas) return;
+  drawCtx = drawCanvas.getContext('2d');
+  drawCtx.strokeStyle = '#f6d69b';
+  drawCtx.lineWidth = 3.5;
+  drawCtx.lineCap = 'round';
+
+  function getPos(e) {
+    const rect = drawCanvas.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return { x: clientX - rect.left, y: clientY - rect.top };
+  }
+
+  drawCanvas.addEventListener('mousedown', e => { isDrawing = true; const p = getPos(e); drawCtx.beginPath(); drawCtx.moveTo(p.x, p.y); });
+  window.addEventListener('mouseup', () => isDrawing = false);
+  drawCanvas.addEventListener('mousemove', e => { if (!isDrawing) return; const p = getPos(e); drawCtx.lineTo(p.x, p.y); drawCtx.stroke(); });
+
+  drawCanvas.addEventListener('touchstart', e => { isDrawing = true; const p = getPos(e); drawCtx.beginPath(); drawCtx.moveTo(p.x, p.y); });
+  window.addEventListener('touchend', () => isDrawing = false);
+  drawCanvas.addEventListener('touchmove', e => { if (!isDrawing) return; const p = getPos(e); drawCtx.lineTo(p.x, p.y); drawCtx.stroke(); });
+}
+
+function clearDrawCanvas() {
+  if (drawCtx) drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+}
+
+function saveDrawnHeart() {
+  triggerBurst(30);
+  showToast('Aapka Dil Aaliya Ke Dil Mein Save Ho Gaya! ❤️🎨');
+}
+
+/* QUIZ */
+const quizDataset = [
+  { q: "Aaliya ke liye duniya mein sabse khoobsurat cheez kya hai?", opts: ["Sohaib ki pyari si muskurahat ❤️", "Ghoomna phirna", "Shopping"], c: 0 },
+  { q: "Hamare future mein sabse zaroori bunyad kya hai?", opts: ["Sukoon, Izzat, Wafa & Dua 🤍", "Arguments", "Silence"], c: 0 },
+  { q: "Aap meri zindagi ka kya hain?", opts: ["Sabse anmol aur roshan hissa ✨", "Just a normal friend", "A stranger"], c: 0 },
+  { q: "Har badi khushi aur mushkil ke baad hum kya kehte hain?", opts: ["Alhamdulillah 🤲", "Nothing", "Okay"], c: 0 },
+  { q: "Hamara sabse pyara aur pehla roohani khwab kya hai?", opts: ["Saath milkar Khana-e-Kaba mein Umrah karna 🕋", "Movie dekhna", "Party karna"], c: 0 },
+  { q: "Sohaib ke bina Aaliya ki duniya kaisi hai?", opts: ["Adhoori, be-rang aur be-sukoon 🥺", "Bohot achi", "Normal"], c: 0 }
+];
+let currentQuizIdx = 0;
+
+function loadQuizQuestion() {
+  const cur = quizDataset[currentQuizIdx];
+  const qTitle = document.getElementById('quizTitle');
+  if (!qTitle) return;
+  qTitle.textContent = `Sawaal ${currentQuizIdx + 1}: ${cur.q}`;
+  const optsContainer = document.getElementById('quizAnswers');
+  optsContainer.innerHTML = '';
+
+  cur.opts.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-btn';
+    btn.textContent = opt;
+    btn.onclick = () => {
+      if (idx === cur.c) {
+        document.getElementById('quizFeedback').textContent = 'Sahi Jawab! Aap sach mein mera dil pehchante hain ❤️';
+        triggerBurst(25);
+      } else {
+        document.getElementById('quizFeedback').textContent = 'Cute koshish... par phir se sochiye jaan 😘';
+      }
+      currentQuizIdx = (currentQuizIdx + 1) % quizDataset.length;
+      setTimeout(loadQuizQuestion, 1500);
+    };
+    optsContainer.appendChild(btn);
+  });
+}
+loadQuizQuestion();
+
+function calculateLoveMeter() {
+  const fill = document.getElementById('meterFill');
+  const text = document.getElementById('meterValue');
+  fill.style.width = '100%';
+  let count = 0;
+  const timer = setInterval(() => {
+    count += 4;
+    if (count >= 100) {
+      clearInterval(timer);
+      text.textContent = '100%... Infinity ∞ ❤️';
+      triggerBurst(45);
+      earnedTrophies++;
+      document.getElementById('trophyCount').textContent = `${earnedTrophies}/4`;
+    } else {
+      text.textContent = count + '%';
+    }
+  }, 25);
+}
+
+/* FINALE */
+function finalAnswer(choice) {
+  triggerBurst(100);
+  spawnPetalShower(40);
+  showToast(`My Heart Is Yours ${choice}! 💍❤️`);
+}
+
+function grandCelebration() {
+  triggerBurst(150);
+  spawnPetalShower(55);
+  showToast('Allah Hafiz Fi Amanillah ❤️ Salgirah Mubarak Sohaib!');
+  if (navigator.vibrate) navigator.vibrate([100, 50, 100, 50, 300]);
+}
+
+function replayUniverse() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showToast('Restarting Our Journey ❤️');
+}
+
+/* STARS & PARTICLES */
+const starsCanvas = document.getElementById('starsCanvas');
+const sCtx = starsCanvas.getContext('2d');
+let stars = [];
+
+function resizeStars() {
+  starsCanvas.width = window.innerWidth;
+  starsCanvas.height = window.innerHeight;
+  stars = Array.from({ length: Math.min(110, Math.floor(window.innerWidth / 4.5)) }, () => ({
+    x: Math.random() * starsCanvas.width,
+    y: Math.random() * starsCanvas.height,
+    radius: Math.random() * 1.4 + 0.3,
+    alpha: Math.random(),
+    speed: Math.random() * 0.02 + 0.005
+  }));
+}
+window.addEventListener('resize', resizeStars);
+resizeStars();
+
+function drawStars() {
+  sCtx.clearRect(0, 0, starsCanvas.width, starsCanvas.height);
+  stars.forEach(s => {
+    s.alpha += s.speed;
+    if (s.alpha > 1) s.alpha = 0;
+    sCtx.globalAlpha = 0.2 + 0.6 * Math.abs(Math.sin(s.alpha * Math.PI));
+    sCtx.fillStyle = '#f6d69b';
+    sCtx.beginPath();
+    sCtx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+    sCtx.fill();
+  });
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+function triggerBurst(count = 35) {
+  const fx = document.getElementById('fxCanvas');
+  const ctx = fx.getContext('2d');
+  fx.width = window.innerWidth;
+  fx.height = window.innerHeight;
+
+  let particles = [];
+  const emojis = ['❤️', '✨', '🌹', '💖', '🎂', '🌸', '💍', '👑'];
+
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: fx.width / 2,
+      y: fx.height * 0.55,
+      vx: (Math.random() - 0.5) * 16,
+      vy: (Math.random() - 0.85) * 16,
+      gravity: 0.24,
+      life: 60 + Math.random() * 40,
+      char: emojis[Math.floor(Math.random() * emojis.length)]
+    });
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, fx.width, fx.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.vy += p.gravity; p.life--;
+      ctx.font = '22px serif'; ctx.fillText(p.char, p.x, p.y);
+    });
+    particles = particles.filter(p => p.life > 0);
+    if (particles.length > 0) requestAnimationFrame(loop);
+    else ctx.clearRect(0, 0, fx.width, fx.height);
+  }
+  loop();
+}
+
+function spawnPetalShower(n = 15) {
+  const container = document.getElementById('petals');
+  const symbols = ['🌹', '🌸', '✨', '❤️', '🕊️'];
+  for (let i = 0; i < n; i++) {
+    const el = document.createElement('div');
+    el.className = 'petal';
+    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    el.style.left = Math.random() * 100 + '%';
+    el.style.fontSize = (16 + Math.random() * 14) + 'px';
+    el.style.animationDuration = (4.5 + Math.random() * 4.5) + 's';
+    el.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+    container.appendChild(el);
+    setTimeout(() => el.remove(), 9000);
+  }
+}
+setInterval(() => {
+  if (document.getElementById('mainApp').style.display === 'block') spawnPetalShower(2);
+}, 5000);
+
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = max > 0 ? (window.scrollY / max) * 100 : 0;
+  document.getElementById('scrollProgress').style.width = progress + '%';
+});
+
+function updateBirthdayCountdown() {
+  const target = new Date('2026-08-15T00:00:00');
+  const diff = Math.max(0, target - new Date());
+  document.getElementById('cdDays').textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+  document.getElementById('cdHours').textContent = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+  document.getElementById('cdMins').textContent = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+  document.getElementById('cdSecs').textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+}
+updateBirthdayCountdown();
+setInterval(updateBirthdayCountdown, 1000);
+</script>
+</body>
+</html>
